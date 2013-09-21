@@ -1,4 +1,4 @@
 Chiχ HTTP
 =========
 
-HTTP nodes for 
+HTTP nodes for Chiχ
