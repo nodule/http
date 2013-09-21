@@ -1,9 +1,8 @@
 {
-  "name":"get",
-  "description":"http get",
+  "name":"request",
+  "description":"http request",
   "require":{
-    "http":"*",
-    "https":"*"
+    "request":"latest"
   },
   "ports":{
     "input":{
@@ -13,8 +12,14 @@
       }
     },
     "output":{
+      "error":{
+        "type":"object"
+      },
       "res":{
         "type":"object"
+      },
+      "body":{
+        "type":"string"
       }
     }
   }

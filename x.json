@@ -17,57 +17,30 @@
     {
       "ports": {
         "input": {
-          "res": {
-            "type": "object"
-          }
-        },
-        "output": {}
-      },
-      "description": "http body",
-      "name": "body",
-      "ns": "http",
-      "fn": "res.body += chunk\n"
-    },
-    {
-      "ports": {
-        "input": {
           "url": {
             "type": "string",
             "format": "uri"
           }
         },
         "output": {
+          "error": {
+            "type": "object"
+          },
           "res": {
             "type": "object"
+          },
+          "body": {
+            "type": "string"
           }
         }
       },
       "require": {
-        "http": "*",
-        "https": "*"
+        "request": "latest"
       },
-      "description": "http get",
-      "name": "get",
+      "description": "http request",
+      "name": "request",
       "ns": "http",
-      "fn": "output = [input.url.match(/^http(s)?/).length === 2 ? https : http,\n\t\t  'get',\n\t\t   input.url]\n"
-    },
-    {
-      "ports": {
-        "input": {
-          "res": {
-            "type": "object"
-          }
-        },
-        "output": {
-          "chunk": {
-            "type": "object"
-          }
-        }
-      },
-      "description": "http onData result",
-      "name": "onData",
-      "ns": "http",
-      "fn": "output = [res, 'on', 'data']\n"
+      "fn": "var obj = {};\nobj.request = request;\noutput = [obj, 'request', input.url]"
     }
   ],
   "twigs": [

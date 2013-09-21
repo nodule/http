@@ -1,1 +1,0 @@
-output = [res, 'on', 'data']
