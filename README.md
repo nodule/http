@@ -1,4 +1,4 @@
-chix-http
+Chiχ HTTP
 =========
 
-Chiχ HTTP
+HTTP nodes for 
