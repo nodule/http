@@ -43,12 +43,13 @@
         }
       },
       "require": {
-        "fs": "*"
+        "http": "*",
+        "https": "*"
       },
       "description": "http get",
       "name": "get",
       "ns": "http",
-      "fn": "output = [http, 'get', input.url]\n"
+      "fn": "output = [input.url.match(/^http(s)?/).length === 2 ? https : http,\n\t\t  'get',\n\t\t   input.url]\n"
     },
     {
       "ports": {

@@ -2,7 +2,8 @@
   "name":"get",
   "description":"http get",
   "require":{
-    "fs":"*"
+    "http":"*",
+    "https":"*"
   },
   "ports":{
     "input":{
