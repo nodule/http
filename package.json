@@ -18,6 +18,9 @@
   },
   "dependencies": {
   },
+  "devDependencies": {
+    "chix-express": "git+https://github.com/psichi/chix-express.git"
+  },
   "main": "x",
   "chix": {
 	"name": "http"
