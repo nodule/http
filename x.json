@@ -1,0 +1,72 @@
+{
+  "name": "http",
+  "description": "HTTP nodes for Chiχ",
+  "version": "0.0.1",
+  "licences": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/psichi/chix/raw/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/psichi/chix-http.git"
+  },
+  "dependencies": {},
+  "nodes": [
+    {
+      "ports": {
+        "input": {
+          "res": {
+            "type": "object"
+          }
+        },
+        "output": {}
+      },
+      "description": "http onData result",
+      "name": "onData",
+      "ns": "http",
+      "fn": "res.body += chunk\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "url": {
+            "type": "uri"
+          }
+        },
+        "output": {
+          "res": {
+            "type": "object"
+          }
+        }
+      },
+      "require": {
+        "fs": "*"
+      },
+      "description": "http get",
+      "name": "get",
+      "ns": "http",
+      "fn": "output = [http, 'get', input.url]\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "res": {
+            "type": "object"
+          }
+        },
+        "output": {
+          "chunk": {
+            "type": "object"
+          }
+        }
+      },
+      "description": "http onData result",
+      "name": "onData",
+      "ns": "http",
+      "fn": "output = [res, 'on', 'data']\n"
+    }
+  ],
+  "twigs": []
+}
