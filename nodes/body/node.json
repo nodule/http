@@ -1,6 +1,6 @@
 {
-  "name": "onData",
-  "description": "http onData result",
+  "name": "body",
+  "description": "http body",
   "ports": {
     "input": {
       "res": {

@@ -23,8 +23,8 @@
         },
         "output": {}
       },
-      "description": "http onData result",
-      "name": "onData",
+      "description": "http body",
+      "name": "body",
       "ns": "http",
       "fn": "res.body += chunk\n"
     },
