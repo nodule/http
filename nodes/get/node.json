@@ -1,18 +1,19 @@
 {
-  "name": "get",
-  "description": "http get",
-  "require": {
-    "fs": "*"
+  "name":"get",
+  "description":"http get",
+  "require":{
+    "fs":"*"
   },
-  "ports": {
-    "input": {
-      "url": {
-        "type": "uri"
+  "ports":{
+    "input":{
+      "url":{
+        "type":"string",
+        "format":"uri"
       }
     },
-    "output": {
-      "res": {
-        "type": "object"
+    "output":{
+      "res":{
+        "type":"object"
       }
     }
   }
