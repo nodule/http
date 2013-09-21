@@ -32,7 +32,8 @@
       "ports": {
         "input": {
           "url": {
-            "type": "uri"
+            "type": "string",
+            "format": "uri"
           }
         },
         "output": {
