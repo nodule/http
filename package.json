@@ -2,7 +2,7 @@
   "name": "chix-http",
   "description": "HTTP nodes for Chiχ",
   "author": "Rob Halff <rob.halff@gmail.com>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "licenses": [
     {
       "type": "MIT",
@@ -16,13 +16,12 @@
   "engines": {
     "node": ">=0.6.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "chix-express": "git+https://github.com/psichi/chix-express.git"
   },
   "main": "x",
   "chix": {
-	"name": "http"
+    "name": "http"
   }
 }
