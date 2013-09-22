@@ -2,7 +2,7 @@
   "name": "chix-http",
   "description": "HTTP nodes for Chiχ",
   "author": "Rob Halff <rob.halff@gmail.com>",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "licenses": [
     {
       "type": "MIT",

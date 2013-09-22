@@ -1,7 +1,7 @@
 {
   "name": "http",
   "description": "HTTP nodes for Chiχ",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "licences": [
     {
       "type": "MIT",
@@ -43,52 +43,5 @@
       "fn": "var obj = {};\nobj.request = request;\noutput = [obj, 'request', input.url]"
     }
   ],
-  "twigs": [
-    {
-      "name": "get",
-      "description": "HTTP get",
-      "nodes": [
-        {
-          "ns": "http",
-          "name": "get",
-          "context": {
-            "url": "https://github.com/psichi/chix-website/raw/master/website.md"
-          }
-        },
-        {
-          "ns": "http",
-          "name": "onData"
-        },
-        {
-          "ns": "http",
-          "name": "body"
-        },
-        {
-          "ns": "express",
-          "name": "send"
-        }
-      ],
-      "links": [
-        {
-          "source": 0,
-          "target": 1,
-          "out": "res",
-          "in": "res"
-        },
-        {
-          "source": 1,
-          "target": 2,
-          "out": "res",
-          "in": "chunk"
-        },
-        {
-          "source": 1,
-          "target": 3,
-          "out": "res",
-          "in": "res"
-        }
-      ],
-      "ns": "http"
-    }
-  ]
+  "twigs": []
 }
