@@ -19,7 +19,10 @@
         "input": {
           "url": {
             "type": "string",
-            "format": "uri"
+            "format": "uri",
+            "title": "Url Request",
+            "description": "The url to be requested.",
+            "required": true
           }
         },
         "output": {
