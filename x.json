@@ -12,7 +12,12 @@
     "type": "git",
     "url": "https://github.com/psichi/chix-http.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "httpinvoke": "latest",
+    "uglify-js": "latest",
+    "request": "latest",
+    "superagent": "latest"
+  },
   "nodes": [
     {
       "ports": {
