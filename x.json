@@ -2,21 +2,12 @@
   "name": "http",
   "description": "HTTP nodes for Chiχ",
   "version": "0.0.3",
-  "licences": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/psichi/chix/raw/master/LICENSE"
-    }
-  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/psichi/chix-http.git"
+    "url": "https://github.com/nodule/http.git"
   },
   "dependencies": {
-    "httpinvoke": "latest",
-    "uglify-js": "latest",
-    "request": "latest",
-    "superagent": "latest"
+    "request": "latest"
   },
   "nodes": [
     {
@@ -46,8 +37,8 @@
         "request": "latest"
       },
       "description": "http request",
-      "name": "request",
       "ns": "http",
+      "name": "request",
       "fn": "var obj = {};\nobj.request = request;\noutput = [obj, 'request', input.url]"
     }
   ],

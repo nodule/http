@@ -1,5 +1,6 @@
 {
   "name":"request",
+  "ns": "http",
   "description":"http request",
   "require":{
     "request":"latest"
