@@ -22,6 +22,7 @@
     "test": "chit"
   },
   "chix": {
-    "name": "http"
+    "name": "http",
+    "color": "rgb(71,162,170)"
   }
 }
