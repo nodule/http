@@ -36,6 +36,9 @@
       "require": {
         "request": "latest"
       },
+      "phrases": {
+        "active": "Performing HTTP request to {{input.url}}"
+      },
       "description": "http request",
       "ns": "http",
       "name": "request",

@@ -2,6 +2,9 @@
   "name":"request",
   "ns": "http",
   "description":"http request",
+  "phrases": {
+    "active": "Performing HTTP request to {{input.url}}"
+  },
   "require":{
     "request":"latest"
   },
