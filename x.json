@@ -7,7 +7,7 @@
     "url": "https://github.com/nodule/http.git"
   },
   "dependencies": {
-    "request": "latest"
+    "request": "2.9.x"
   },
   "nodes": [
     {
@@ -34,7 +34,7 @@
         }
       },
       "require": {
-        "request": "latest"
+        "request": "2.9.x"
       },
       "phrases": {
         "active": "Performing HTTP request to {{input.url}}"
@@ -42,7 +42,7 @@
       "description": "http request",
       "ns": "http",
       "name": "request",
-      "fn": "var obj = {};\nobj.request = request;\noutput = [obj, 'request', input.url]"
+      "fn": "var obj = {};\nobj.request = request;\noutput = [obj, 'request', input.url]\n"
     }
   ],
   "twigs": []

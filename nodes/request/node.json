@@ -6,7 +6,7 @@
     "active": "Performing HTTP request to {{input.url}}"
   },
   "require":{
-    "request":"latest"
+    "request":"2.9.x"
   },
   "ports":{
     "input":{
