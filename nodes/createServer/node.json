@@ -1,0 +1,26 @@
+{
+  "name":"createServer",
+  "ns": "http",
+  "description":"Create HTTP Server",
+  "phrases": {
+    "active": "Creating HTTP Server"
+  },
+  "require":{
+    "http":"internal"
+  },
+  "ports":{
+    "input":{
+    },
+    "output":{
+      "http":{
+        "type":"function"
+      },
+      "request":{
+        "type":"function"
+      },
+      "response":{
+        "type":"function"
+      }
+    }
+  }
+}

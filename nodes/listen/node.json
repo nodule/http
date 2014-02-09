@@ -1,0 +1,29 @@
+{
+  "name":"listen",
+  "ns": "http",
+  "description":"HTTP Listen",
+  "phrases": {
+    "active": "HTTP Listening on {{input.host}}:{{input.port}}"
+  },
+  "ports":{
+    "input":{
+      "server":{
+        "type":"function",
+        "required": true
+      },
+      "port":{
+        "type":"string",
+        "default": "8080"
+      },
+      "host":{
+        "type":"string",
+        "default": "0.0.0.0"
+      }
+    },
+    "output":{
+      "http":{
+        "type":"object"
+      }
+    }
+  }
+}
