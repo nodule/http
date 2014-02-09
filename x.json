@@ -13,6 +13,60 @@
     {
       "ports": {
         "input": {
+          "app": {
+            "type": "function"
+          }
+        },
+        "output": {
+          "http": {
+            "type": "function"
+          }
+        }
+      },
+      "require": {
+        "http": "internal"
+      },
+      "phrases": {
+        "active": "Creating HTTP Server"
+      },
+      "description": "Create HTTP Server",
+      "ns": "http",
+      "name": "createServer",
+      "fn": "output.http = http.createServer(input.app);\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "http": {
+            "type": "function",
+            "required": true
+          },
+          "port": {
+            "type": "string",
+            "default": "8080"
+          },
+          "host": {
+            "type": "string",
+            "default": "0.0.0.0"
+          }
+        },
+        "output": {
+          "http": {
+            "type": "function"
+          }
+        }
+      },
+      "phrases": {
+        "active": "HTTP Listening on {{input.host}}:{{input.port}}"
+      },
+      "description": "HTTP Listen",
+      "ns": "http",
+      "name": "listen",
+      "fn": "output.http = input.http.listen(input.port, input.host);\n"
+    },
+    {
+      "ports": {
+        "input": {
           "url": {
             "type": "string",
             "format": "uri",
@@ -26,7 +80,7 @@
             "type": "object"
           },
           "res": {
-            "type": "object"
+            "type": "function"
           },
           "body": {
             "type": "string"

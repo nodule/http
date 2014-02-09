@@ -23,7 +23,7 @@
         "type":"object"
       },
       "res":{
-        "type":"object"
+        "type":"function"
       },
       "body":{
         "type":"string"

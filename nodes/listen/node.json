@@ -22,7 +22,7 @@
     },
     "output":{
       "http":{
-        "type":"object"
+        "type":"function"
       }
     }
   }
