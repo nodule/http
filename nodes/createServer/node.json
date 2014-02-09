@@ -10,15 +10,12 @@
   },
   "ports":{
     "input":{
+      "app":{
+        "type":"function"
+      }
     },
     "output":{
       "http":{
-        "type":"function"
-      },
-      "request":{
-        "type":"function"
-      },
-      "response":{
         "type":"function"
       }
     }
