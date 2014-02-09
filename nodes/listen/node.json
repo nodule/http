@@ -7,7 +7,7 @@
   },
   "ports":{
     "input":{
-      "server":{
+      "http":{
         "type":"function",
         "required": true
       },
