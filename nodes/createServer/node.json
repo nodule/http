@@ -11,7 +11,7 @@
   "ports":{
     "input":{
       "app":{
-        "type":"Server"
+        "type":"object"
       }
     },
     "output":{
