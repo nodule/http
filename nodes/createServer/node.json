@@ -11,7 +11,7 @@
   "ports":{
     "input":{
       "app":{
-        "type":"object"
+        "type":"function"
       }
     },
     "output":{
