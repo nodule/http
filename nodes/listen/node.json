@@ -8,7 +8,7 @@
   "ports":{
     "input":{
       "http":{
-        "type":"function",
+        "type":"Server",
         "required": true
       },
       "port":{
@@ -22,7 +22,7 @@
     },
     "output":{
       "http":{
-        "type":"function"
+        "type":"Server"
       }
     }
   }

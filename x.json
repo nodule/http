@@ -14,12 +14,12 @@
       "ports": {
         "input": {
           "app": {
-            "type": "function"
+            "type": "Server"
           }
         },
         "output": {
           "http": {
-            "type": "function"
+            "type": "Server"
           }
         }
       },
@@ -38,7 +38,7 @@
       "ports": {
         "input": {
           "http": {
-            "type": "function",
+            "type": "Server",
             "required": true
           },
           "port": {
@@ -52,7 +52,7 @@
         },
         "output": {
           "http": {
-            "type": "function"
+            "type": "Server"
           }
         }
       },
@@ -80,7 +80,7 @@
             "type": "object"
           },
           "res": {
-            "type": "function"
+            "type": "Stream"
           },
           "body": {
             "type": "string"

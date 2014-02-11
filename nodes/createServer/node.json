@@ -11,12 +11,12 @@
   "ports":{
     "input":{
       "app":{
-        "type":"function"
+        "type":"Server"
       }
     },
     "output":{
       "http":{
-        "type":"function"
+        "type":"Server"
       }
     }
   }
