@@ -14,11 +14,12 @@
       "ports": {
         "input": {
           "app": {
-            "type": "Server"
+            "type": "function"
           }
         },
         "output": {
           "http": {
+            "title": "Server",
             "type": "Server"
           }
         }
@@ -52,6 +53,7 @@
         },
         "output": {
           "http": {
+            "title": "Server",
             "type": "Server"
           }
         }
@@ -69,20 +71,22 @@
         "input": {
           "url": {
             "type": "string",
-            "format": "uri",
+            "format": "url",
             "title": "Url Request",
-            "description": "The url to be requested.",
-            "required": true
+            "description": "The url to be requested."
           }
         },
         "output": {
           "error": {
+            "title": "Error",
             "type": "object"
           },
           "res": {
+            "title": "Stream",
             "type": "Stream"
           },
           "body": {
+            "title": "Body",
             "type": "string"
           }
         }

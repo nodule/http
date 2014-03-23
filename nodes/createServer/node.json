@@ -16,6 +16,7 @@
     },
     "output":{
       "http":{
+        "title":"Server",
         "type":"Server"
       }
     }
