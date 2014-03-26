@@ -14,6 +14,7 @@
       "ports": {
         "input": {
           "app": {
+            "title": "App",
             "type": "function"
           }
         },
@@ -39,14 +40,17 @@
       "ports": {
         "input": {
           "http": {
+            "title": "Server",
             "type": "Server",
             "required": true
           },
           "port": {
+            "title": "Port",
             "type": "string",
             "default": "8080"
           },
           "host": {
+            "title": "Host",
             "type": "string",
             "default": "0.0.0.0"
           }
@@ -70,9 +74,9 @@
       "ports": {
         "input": {
           "url": {
+            "title": "Url Request",
             "type": "string",
             "format": "url",
-            "title": "Url Request",
             "description": "The url to be requested."
           }
         },

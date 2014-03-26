@@ -11,9 +11,9 @@
   "ports":{
     "input":{
       "url":{
+        "title":"Url Request",
         "type":"string",
         "format":"url",
-        "title":"Url Request",
         "description":"The url to be requested."
       }
     },
