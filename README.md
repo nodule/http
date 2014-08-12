@@ -5,4 +5,6 @@ Chiχ HTTP
 
 HTTP nodes for Chiχ
 
+request depedency can be updated if mime is fixed.
+
 
