@@ -1,35 +1,37 @@
 {
-  "name":"request",
+  "name": "request",
   "ns": "http",
-  "description":"http request",
+  "description": "http request",
   "phrases": {
     "active": "Performing HTTP request to {{input.url}}"
   },
-  "require":{
-    "request":"2.9.x"
-  },
-  "ports":{
-    "input":{
-      "url":{
-        "title":"Url Request",
-        "type":"string",
-        "format":"url",
-        "description":"The url to be requested."
+  "ports": {
+    "input": {
+      "url": {
+        "title": "Url Request",
+        "type": "string",
+        "format": "url",
+        "description": "The url to be requested."
       }
     },
-    "output":{
-      "error":{
-        "title":"Error",
-        "type":"object"
+    "output": {
+      "error": {
+        "title": "Error",
+        "type": "object"
       },
-      "res":{
-        "title":"Stream",
-        "type":"Stream"
+      "res": {
+        "title": "Stream",
+        "type": "Stream"
       },
-      "body":{
-        "title":"Body",
-        "type":"string"
+      "body": {
+        "title": "Body",
+        "type": "string"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "request": "2.9.x"
     }
   }
 }

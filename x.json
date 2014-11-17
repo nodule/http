@@ -11,6 +11,11 @@
   },
   "nodes": [
     {
+      "dependencies": {
+        "npm": {
+          "http": "internal"
+        }
+      },
       "ports": {
         "input": {
           "app": {
@@ -24,9 +29,6 @@
             "type": "Server"
           }
         }
-      },
-      "require": {
-        "http": "internal"
       },
       "phrases": {
         "active": "Creating HTTP Server"
@@ -71,6 +73,11 @@
       "fn": "output.http = input.http.listen(input.port, input.host);\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "request": "2.9.x"
+        }
+      },
       "ports": {
         "input": {
           "url": {
@@ -94,9 +101,6 @@
             "type": "string"
           }
         }
-      },
-      "require": {
-        "request": "2.9.x"
       },
       "phrases": {
         "active": "Performing HTTP request to {{input.url}}"

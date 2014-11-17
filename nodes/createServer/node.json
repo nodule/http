@@ -1,25 +1,27 @@
 {
-  "name":"createServer",
+  "name": "createServer",
   "ns": "http",
-  "description":"Create HTTP Server",
+  "description": "Create HTTP Server",
   "phrases": {
     "active": "Creating HTTP Server"
   },
-  "require":{
-    "http":"internal"
-  },
-  "ports":{
-    "input":{
-      "app":{
-        "title":"App",
-        "type":"function"
+  "ports": {
+    "input": {
+      "app": {
+        "title": "App",
+        "type": "function"
       }
     },
-    "output":{
-      "http":{
-        "title":"Server",
-        "type":"Server"
+    "output": {
+      "http": {
+        "title": "Server",
+        "type": "Server"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "http": "internal"
     }
   }
 }

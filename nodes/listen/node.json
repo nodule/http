@@ -1,32 +1,32 @@
 {
-  "name":"listen",
+  "name": "listen",
   "ns": "http",
-  "description":"HTTP Listen",
+  "description": "HTTP Listen",
   "phrases": {
     "active": "HTTP Listening on {{input.host}}:{{input.port}}"
   },
-  "ports":{
-    "input":{
-      "http":{
-        "title":"Server",
-        "type":"Server",
+  "ports": {
+    "input": {
+      "http": {
+        "title": "Server",
+        "type": "Server",
         "required": true
       },
-      "port":{
-        "title":"Port",
-        "type":"string",
+      "port": {
+        "title": "Port",
+        "type": "string",
         "default": "8080"
       },
-      "host":{
-        "title":"Host",
-        "type":"string",
+      "host": {
+        "title": "Host",
+        "type": "string",
         "default": "0.0.0.0"
       }
     },
-    "output":{
-      "http":{
-        "title":"Server",
-        "type":"Server"
+    "output": {
+      "http": {
+        "title": "Server",
+        "type": "Server"
       }
     }
   }
