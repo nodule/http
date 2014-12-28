@@ -1,5 +1,5 @@
 {
-  "name": "nodule-http",
+  "name": "chix-http",
   "description": "HTTP nodes for Chiχ",
   "author": "Rob Halff <rob.halff@gmail.com>",
   "version": "0.0.3",
@@ -17,7 +17,6 @@
   "devDependencies": {
     "chit": "0.x.x"
   },
-  "main": "x",
   "scripts": {
     "test": "chit"
   },
