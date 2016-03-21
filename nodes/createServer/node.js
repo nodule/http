@@ -1,1 +1,1 @@
-output.http = http.createServer(input.app);
+output.http = http.createServer($.app);
