@@ -1,1 +1,1 @@
-output.http = http.createServer($.app);
+output.http = $.create(http.createServer($.app));

@@ -1,1 +1,1 @@
-output.http = $.http.listen($.port, $.host);
+output.http = $.create($.http.listen($.port, $.host));
