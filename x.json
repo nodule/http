@@ -36,7 +36,7 @@
       "description": "Create HTTP Server",
       "ns": "http",
       "name": "createServer",
-      "fn": "output.http = http.createServer(input.app);\n"
+      "fn": "output.http = $.create(http.createServer($.app));\n"
     },
     {
       "ports": {
@@ -70,7 +70,7 @@
       "description": "HTTP Listen",
       "ns": "http",
       "name": "listen",
-      "fn": "output.http = input.http.listen(input.port, input.host);\n"
+      "fn": "output.http = $.create($.http.listen($.port, $.host));\n"
     },
     {
       "dependencies": {
@@ -108,7 +108,7 @@
       "description": "http request",
       "ns": "http",
       "name": "request",
-      "fn": "var obj = {};\nobj.request = request;\noutput = [obj, 'request', input.url]\n"
+      "fn": "var obj = {};\nobj.request = request;\noutput = [obj, 'request', $.url]\n"
     }
   ],
   "twigs": []

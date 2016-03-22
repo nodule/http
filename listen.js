@@ -30,9 +30,9 @@ module.exports = {
       }
     }
   },
-  fn: function listen(input, output, state, done, cb, on) {
+  fn: function listen(input, $, output, state, done, cb, on) {
     var r = function() {
-      output.http = input.http.listen(input.port, input.host);
+      output.http = $.create($.http.listen($.port, $.host));
     }.call(this);
     return {
       output: output,

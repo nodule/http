@@ -24,9 +24,9 @@ module.exports = {
       http: require('http')
     }
   },
-  fn: function createServer(input, output, state, done, cb, on, http) {
+  fn: function createServer(input, $, output, state, done, cb, on, http) {
     var r = function() {
-      output.http = http.createServer(input.app);
+      output.http = $.create(http.createServer($.app));
     }.call(this);
     return {
       output: output,

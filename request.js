@@ -34,11 +34,11 @@ module.exports = {
       request: require('request')
     }
   },
-  fn: function request(input, output, state, done, cb, on, request) {
+  fn: function request(input, $, output, state, done, cb, on, request) {
     var r = function() {
       var obj = {}
       obj.request = request
-      obj.request(input.url, function requestCallback(error, res, body) {
+      obj.request($.url, function requestCallback(error, res, body) {
         cb({
           error: error,
           res: res,
