@@ -1,6 +1,7 @@
 module.exports = {
   name: "listen",
   ns: "http",
+  async: true,
   description: "HTTP Listen",
   phrases: {
     active: "HTTP Listening on {{input.host}}:{{input.port}}"
@@ -10,7 +11,20 @@ module.exports = {
       http: {
         title: "Server",
         type: "Server",
-        required: true
+        async: true,
+        required: true,
+        fn: function __HTTP__(data, source, state, input, $, output) {
+          var r = function() {
+            state.http = $.http.listen($.port, $.host);
+            output({
+              http: $.create(state.http)
+            });
+          }.call(this);
+          return {
+            state: state,
+            return: r
+          };
+        }
       },
       port: {
         title: "Port",
@@ -30,15 +44,18 @@ module.exports = {
       }
     }
   },
-  fn: function listen(input, $, output, state, done, cb, on) {
-    var r = function() {
-      output.http = $.create($.http.listen($.port, $.host));
-    }.call(this);
-    return {
-      output: output,
-      state: state,
-      on: on,
-      return: r
-    };
+  state: {},
+  on: {
+    shutdown: function __ONSHUTDOWN__(data, source, state, input, $, output) {
+      var r = function() {
+        if (state.http) {
+          state.http.close();
+        }
+      }.call(this);
+      return {
+        state: state,
+        return: r
+      };
+    }
   }
 }

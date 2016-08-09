@@ -40,6 +40,7 @@
     {
       "name": "listen",
       "ns": "http",
+      "async": true,
       "description": "HTTP Listen",
       "phrases": {
         "active": "HTTP Listening on {{input.host}}:{{input.port}}"
@@ -49,6 +50,7 @@
           "http": {
             "title": "Server",
             "type": "Server",
+            "async": true,
             "required": true
           },
           "port": {
@@ -69,7 +71,7 @@
           }
         }
       },
-      "fn": "output.http = $.create($.http.listen($.port, $.host));\n"
+      "fn": "on.input.http = function () {\n  state.http = $.http.listen($.port, $.host);\n  output({\n    http: $.create(state.http)\n  });\n};\n\non.shutdown = function () {\n  if (state.http) {\n     state.http.close();\n  }\n};\n"
     },
     {
       "name": "request",
