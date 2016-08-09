@@ -31,7 +31,7 @@
           "http": "internal"
         }
       },
-      "fn": "output = function () {\n  var _http = http.createServer(function httpRequest (req, res) {\n    cb({\n      out: {\n        $.create({\n          request: req,\n          response: res\n        })\n      }\n    });\n  });\n\n  cb({\n    http: $.create(_http);\n  });\n};\n"
+      "fn": "output = function () {\n  var _http = http.createServer(function httpRequest (req, res) {\n    cb({\n      out: $.create({request: req, response: res})\n    });\n  });\n\n  cb({\n    http: $.create(_http)\n  });\n};\n"
     },
     {
       "name": "listen",

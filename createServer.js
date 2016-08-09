@@ -6,12 +6,7 @@ module.exports = {
     active: "Creating HTTP Server"
   },
   ports: {
-    input: {
-      app: {
-        title: "App",
-        type: "function"
-      }
-    },
+    input: {},
     output: {
       http: {
         title: "Server",
@@ -26,7 +21,18 @@ module.exports = {
   },
   fn: function createServer(input, $, output, state, done, cb, on, http) {
     var r = function() {
-      output.http = $.create(http.createServer($.app));
+      var _http = http.createServer(function httpRequest(req, res) {
+        output({
+          out: $.create({
+            request: req,
+            response: res
+          })
+        });
+      });
+
+      output({
+        http: $.create(_http)
+      });
     }.call(this);
     return {
       output: output,
