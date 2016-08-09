@@ -8,6 +8,10 @@ module.exports = {
   ports: {
     input: {},
     output: {
+      out: {
+        title: "Out",
+        type: "object"
+      },
       http: {
         title: "Server",
         type: "Server"
