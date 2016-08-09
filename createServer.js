@@ -10,7 +10,7 @@ module.exports = {
     output: {
       out: {
         title: "Out",
-        type: "object"
+        type: "function"
       },
       http: {
         title: "Server",
