@@ -6,12 +6,7 @@
     "active": "Creating HTTP Server"
   },
   "ports": {
-    "input": {
-      "app": {
-        "title": "App",
-        "type": "function"
-      }
-    },
+    "input": {},
     "output": {
       "http": {
         "title": "Server",
