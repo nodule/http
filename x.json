@@ -11,18 +11,14 @@
   },
   "nodes": [
     {
-      "dependencies": {
-        "npm": {
-          "http": "internal"
-        }
+      "name": "createServer",
+      "ns": "http",
+      "description": "Create HTTP Server",
+      "phrases": {
+        "active": "Creating HTTP Server"
       },
       "ports": {
-        "input": {
-          "app": {
-            "title": "App",
-            "type": "function"
-          }
-        },
+        "input": {},
         "output": {
           "http": {
             "title": "Server",
@@ -30,15 +26,20 @@
           }
         }
       },
-      "phrases": {
-        "active": "Creating HTTP Server"
+      "dependencies": {
+        "npm": {
+          "http": "internal"
+        }
       },
-      "description": "Create HTTP Server",
-      "ns": "http",
-      "name": "createServer",
-      "fn": "output.http = $.create(http.createServer($.app));\n"
+      "fn": "output = function () {\n  var _http = http.createServer(function httpRequest (req, res) {\n    cb({\n      out: {\n        $.create({\n          request: req,\n          response: res\n        })\n      }\n    });\n  });\n\n  cb({\n    http: $.create(_http);\n  });\n};\n"
     },
     {
+      "name": "listen",
+      "ns": "http",
+      "description": "HTTP Listen",
+      "phrases": {
+        "active": "HTTP Listening on {{input.host}}:{{input.port}}"
+      },
       "ports": {
         "input": {
           "http": {
@@ -64,19 +65,14 @@
           }
         }
       },
-      "phrases": {
-        "active": "HTTP Listening on {{input.host}}:{{input.port}}"
-      },
-      "description": "HTTP Listen",
-      "ns": "http",
-      "name": "listen",
       "fn": "output.http = $.create($.http.listen($.port, $.host));\n"
     },
     {
-      "dependencies": {
-        "npm": {
-          "request": "2.9.x"
-        }
+      "name": "request",
+      "ns": "http",
+      "description": "http request",
+      "phrases": {
+        "active": "Performing HTTP request to {{input.url}}"
       },
       "ports": {
         "input": {
@@ -102,14 +98,12 @@
           }
         }
       },
-      "phrases": {
-        "active": "Performing HTTP request to {{input.url}}"
+      "dependencies": {
+        "npm": {
+          "request": "2.9.x"
+        }
       },
-      "description": "http request",
-      "ns": "http",
-      "name": "request",
       "fn": "var obj = {};\nobj.request = request;\noutput = [obj, 'request', $.url]\n"
     }
-  ],
-  "twigs": []
+  ]
 }
