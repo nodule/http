@@ -1,0 +1,6 @@
+{
+  "dependencies": {},
+  "nodeDefinitions": {
+    "https://api.chix.io/nodes/{ns}/{name}": {}
+  }
+}

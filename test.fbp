@@ -1,0 +1,10 @@
+title: Test Request
+
+request(http/request)
+ErrorLog(console/log)
+Log(console/log)
+
+'https://www.google.com/' url request
+
+request error -> msg ErrorLog
+request body -> msg Log
